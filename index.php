@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+Inicio, permite ir a la tabla de alumnos o a la de profesores
 -->
 <html>
     <head>
@@ -10,9 +8,12 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        
-        <?php
-        // put your code here
-        ?>
+        Bienvenido! quieres ver una lista de los profesores o de los alumnos?
+        <form action="listadoprofesores.php" method="POST">
+            <input type="submit" value="profesores"/>
+        </form>
+        <form action="listadoalumnos.php" method="POST">
+            <input type="submit" value="alumnos"/>
+        </form>
     </body>
 </html>
