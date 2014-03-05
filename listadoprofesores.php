@@ -26,6 +26,7 @@
                 echo "<th>Nombre</th>";
                 echo "<th>Asignatura</th>";
                 echo "<th></th>";
+                echo "<th></th>";
                 echo "</tr>";
                 foreach ($resultado as $registro) {
                     echo "<tr>";
@@ -34,6 +35,8 @@
                     echo "<td>".$registro['asignatura']."</td>";
                     $destino="formulario_editar_profesor.php?id=".$registro['id'];
                     echo "<td><a href=".$destino.">Editar</a></td>";
+                    $destino="formulario_borrar_profesor.php?id=".$registro['id'];
+                    echo "<td><a href=".$destino.">Eliminar</a></td>";
                     echo "</tr>";
                 }
                 echo "</table>";

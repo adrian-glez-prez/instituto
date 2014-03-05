@@ -25,12 +25,16 @@
                 echo "<th>Id</th>";
                 echo "<th>Nombre</th>";
                 echo "<th>Curso</th>";
+                echo "<th></th>";
+                echo "<th></th>";
                 echo "</tr>";
                 foreach ($resultado as $registro) {
                     echo "<tr>";
                     echo "<td>".$registro['id']."</td>";
                     echo "<td>".$registro['nombre']."</td>";                    
                     echo "<td>".$registro['curso']."</td>";
+                    echo "<td><a href=formulario_editar_alumno.php?id=".$registro['id'].">Editar</a></td>";
+                    echo "<td><a href=formulario_borrar_alumno.php?id=".$registro['id'].">Eliminar</a></td>";
                     echo "</tr>";
                 }
                 echo "</table>";
