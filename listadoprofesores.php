@@ -11,9 +11,8 @@
         <div>
             Listado de los profesores del centro en la base de datos
         </div>
-        
-               <div> Desea registrar un nuevo profesor?</div>
-               <a href="formulario_nuevo_profesor.php">Si, por favor</a>
+        <div> Desea registrar un nuevo profesor?</div>
+        <a href="formulario_nuevo_profesor.php">Si, por favor</a>
         <?php 
             $bd = conectaBd();
             $consulta = "SELECT * FROM profesores";
@@ -26,12 +25,15 @@
                 echo "<th>Id</th>";
                 echo "<th>Nombre</th>";
                 echo "<th>Asignatura</th>";
+                echo "<th></th>";
                 echo "</tr>";
                 foreach ($resultado as $registro) {
                     echo "<tr>";
                     echo "<td>".$registro['id']."</td>";
                     echo "<td>".$registro['nombre']."</td>";                    
                     echo "<td>".$registro['asignatura']."</td>";
+                    $destino="formulario_editar_profesor.php?id=".$registro['id'];
+                    echo "<td><a href=".$destino.">Editar</a></td>";
                     echo "</tr>";
                 }
                 echo "</table>";

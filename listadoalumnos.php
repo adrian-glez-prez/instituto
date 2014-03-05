@@ -11,6 +11,8 @@
         <div>
             Listado de los alumnos del centro en la base de datos
         </div>
+        <div> Desea registrar un nuevo alumno?</div>
+        <a href="formulario_nuevo_alumno.php">Si, por favor</a>
         <?php 
             $bd = conectaBd();
             $consulta = "SELECT * FROM alumnos";
